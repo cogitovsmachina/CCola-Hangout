@@ -175,6 +175,43 @@ function createOverlays() {
   minScale['mono'] = 0.5;
   maxScale['mono'] = 1.5;
 
+  // Cargando nuevas imagenes /////
+  var lengua = gapi.hangout.av.effects.createImageResource(
+      'http://cocacolahangout.appspot.com/static/images/icn_expresiones_lengua.png');
+  overlays['lengua'] = heart.createFaceTrackingOverlay(
+      {'trackingFeature':
+        gapi.hangout.av.effects.FaceTrackingFeature.MOUTH_CENTER,
+        'scaleWithFace': true,
+        'scale': 1.0});
+  minScale['lengua'] = 0.5;
+  maxScale['lengua'] = 1.5;
+
+  var sonrisa = gapi.hangout.av.effects.createImageResource(
+      'http://cocacolahangout.appspot.com/static/images/icn_expresiones_sonrisa.png');
+  overlays['sonrisa'] = sonrisa.createFaceTrackingOverlay(
+      {'trackingFeature': 
+      'scaleWithFace': true,
+      'scale': 1.0});
+  minScale['sonrisa'] = 0.5;
+  maxScale['sonrisa'] = 1.5;
+
+  var ave = gapi.hangout.av.effects.createImageResource(
+      'http://cocacolahangout.appspot.com/static/images/icn_ave.png');
+  overlays['ave'] = ave.createFaceTrackingOverlay(
+      {'trackingFeature': true,
+      'scale': 1.0});
+  minScale['ave'] = 0.5;
+  maxScale['ave'] = 1.5;
+
+  var foco = gapi.hangout.av.effects.createImageResource(
+    'http://cocacolahangout.appspot.com/static/images/icn_corazon_foco.png');
+  overlays['foco'] = foco.createFaceTrackingOverlay(
+    {'trackingFeature': true,
+    'scale': 1.0});
+  minScale['foco'] = 0.5;
+  maxScale['foco'] = 1.5;
+  /////////////////////////////////
+
   var stache = gapi.hangout.av.effects.createImageResource(
       'http://hangoutmediastarter.appspot.com/static/mustache.png');
   overlays['stache'] = stache.createFaceTrackingOverlay(
