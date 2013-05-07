@@ -43,7 +43,7 @@
 <body>
 
 <script src="https://hangoutsapi.talkgadget.google.com/hangouts/api/hangout.js?v=1.4" ></script>
-<script src="http://189.147.57.34:8080/static/html5slider.js"></script>
+<script src="http://cocacolahangout.appspot.com/static/html5slider.js"></script>
 
 
 <h3>Simple Hangout App</h3>
@@ -174,7 +174,7 @@ function showParticipants() {
 
 
 </script>
-<script src="http://189.147.57.34:8080/static/mediaStarter.js"></script>
+<script src="http://cocacolahangout.appspot.com/static/mediaStarter.js"></script>
 </body>
 ]]>
 </Content>
