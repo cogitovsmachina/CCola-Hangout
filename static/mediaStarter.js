@@ -166,7 +166,7 @@ function createOverlays() {
   maxScale['topHat'] = 1.5;
 
   var mono = gapi.hangout.av.effects.createImageResource(
-      'http://189.147.57.34:8080/static/monocle.png');
+      'http://cocacolahangout.appspot.com/static/monocle.png');
   overlays['mono'] = mono.createFaceTrackingOverlay(
       {'trackingFeature':
        gapi.hangout.av.effects.FaceTrackingFeature.RIGHT_EYE,
@@ -228,7 +228,7 @@ function createOverlays() {
   maxScale['stache'] = 2.5;
 
   var nuevo = gapi.hangout.av.effects.createImageResource(
-      'http://189.147.57.34:8080/static/monocle.png');
+      'http://cocacolahangout.appspot.com/static/monocle.png');
   overlays['nuevo'] = nuevo.createFaceTrackingOverlay(
       {'trackingFeature':
         gapi.hangout.av.effects.FaceTrackingFeature.NOSE_TIP,
