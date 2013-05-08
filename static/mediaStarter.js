@@ -241,23 +241,23 @@ function createOverlays() {
       minScale['sol'] = 1.5;
       maxScale['sol'] = 2.5;
 
-      var hola = gapi.hangout.av.effects.createImageResource(
-      baseURL+'/static/images/icn_frases.png');
-      overlays['hola'] = hola.createOverlay(
+      var pajaro = gapi.hangout.av.effects.createImageResource(
+      baseURL+'/static/images/icn_ave.png');
+      overlays['pajaro'] = pajaro.createOverlay(
         {'scale':
         {'magnitude': 0.3,
         'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
-      overlays['hola'].setPosition(0.2, -0.3);
-      minScale['hola'] = 1.5;
-      maxScale['hola'] = 2.5;
+      overlays['pajaro'].setPosition(-0.33, 0.3);
+      minScale['pajaro'] = 1.5;
+      maxScale['pajaro'] = 2.5;
 
       var heart = gapi.hangout.av.effects.createImageResource(
       baseURL+'/static/images/icn_corazon_foco.png');
       overlays['heart'] = heart.createOverlay(
         {'scale':
-        {'magnitude': 0.5,
+        {'magnitude': 0.3,
         'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
-      overlays['heart'].setPosition(-0.3, 0.3);
+      overlays['heart'].setPosition(-0.3, 0.2);
       minScale['heart'] = 1.5;
       maxScale['heart'] = 2.5;
 
