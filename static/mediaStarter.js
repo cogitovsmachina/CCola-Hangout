@@ -204,7 +204,7 @@ function createOverlays() {
       {'trackingFeature': 
         gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
       'scaleWithFace':true,
-      'offset': {x:0, y:0.8},
+      'offset': {x:0, y:1.2},
       'scale': 1.3});
   minScale['ave'] = 0.5;
   maxScale['ave'] = 1.0;
