@@ -261,7 +261,7 @@ function createOverlays() {
        {'magnitude': 0.5,
         'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
   // Put the text x-centered and near the bottom of the frame
-  overlays['fancy'].setPosition(0.45, 0.45);
+  overlays['fancy'].setPosition(-0.5, 0.5);
   minScale['fancy'] = 1.0;
   maxScale['fancy'] = 2.5;
 }
