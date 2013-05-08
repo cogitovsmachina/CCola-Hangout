@@ -19,7 +19,7 @@ var keepAnimating = false;
 function showOverlay(name) {
   hideAllOverlays();
   currentItem = name;
-  setControlVisibility(true);
+ // setControlVisibility(true);
   overlays[currentItem].setVisible(true);
   updateControls();
 }
