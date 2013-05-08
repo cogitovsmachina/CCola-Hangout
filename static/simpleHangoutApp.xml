@@ -94,7 +94,7 @@
 <input class="button" type="button" value="Prueba!" id="nuevoButton"
         onClick="showOverlay('nuevo')"/>
 -->
-// nuevos botones//
+<!-- nuevos botones -->  
 <input class="button" type="button" value="Lengua!" id="lenguaButton"
         onClick="showOverlay('lengua')"/>
 
@@ -106,8 +106,8 @@
 
 <input class="button" type="button" value="Foco!" id="focoButton"
         onClick="showOverlay('foco')"/>
-//////////////////////
-        
+
+   
 
 <input class="button" type="button" value="Nothing." id="nothingButton"
                             onClick="showNothing()"/>
