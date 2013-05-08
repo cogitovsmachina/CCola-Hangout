@@ -56,7 +56,7 @@
 <p>
 
 
-//nuevo codigo//////////////////////
+
 <center>
 
 <div id='fullUI' style='visibility:hidden;'>
@@ -151,7 +151,6 @@
 </div>
 
 </center>
-////////////////////////////////////
 
 <p><a href="http://developers.google.com/+/hangouts/getting-started">Read the docs</a> to learn more about developing hangouts!</a></p>
 
