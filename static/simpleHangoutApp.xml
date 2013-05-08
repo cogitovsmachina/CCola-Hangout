@@ -43,8 +43,8 @@
 <body>
 
 <script src="https://hangoutsapi.talkgadget.google.com/hangouts/api/hangout.js?v=1.4" ></script>
-<script src="http://cocacolahangout.appspot.com/static/html5slider.js"></script>
-<script src="http://cocacolahangout.appspot.com/static/mediaStarter.js"></script>
+<script src="/static/html5slider.js"></script>
+<script src="/static/mediaStarter.js"></script>
 
 
 
