@@ -213,7 +213,7 @@ function createOverlays() {
     {'trackingFeature': 
       gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
       'scaleWithFace':true,
-      'scale': 0.0});
+      'scale': 3.0});
   minScale['foco'] = 3.0;
   maxScale['foco'] = 3.0;
   /////////////////////////////////
