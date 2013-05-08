@@ -9,4 +9,8 @@ handlers:
   static_dir: static
 
 - url: /.*
-  script: helloworld.py
+  script: helloworld.app
+
+libraries:
+- name: webapp2
+  version: latest
