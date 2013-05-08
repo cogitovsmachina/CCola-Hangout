@@ -227,7 +227,7 @@ function createOverlays() {
         {'scale':
         {'magnitude': 0.2,
         'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
-      overlays['star'].setPosition(-0.1 , -3);
+      overlays['star'].setPosition(-0.1 , -0.3);
       minScale['star'] = 1.5;
       maxScale['star'] = 2.5;
 
