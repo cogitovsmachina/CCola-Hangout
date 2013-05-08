@@ -338,6 +338,13 @@ function showAnimatedOverlay() {
 
 createOverlays();
 
+var id = gapi.hangout.getLocalParticipantId();
+var canvas = gapi.hangout.layout.getVideoCanvas();
+
+canvas.setWidth(600);
+canvas.setPosition(300, 50);
+canvas.setVisible(true);
+
 // SOUND
 
 var gooddaySoundURL =
@@ -367,6 +374,8 @@ function init() {
         overlayControls = document.getElementById('overlayControls');
         scaleTxt = document.getElementById('scaleTxt');
         offsetTxt = document.getElementById('offsetTxt');
+
+
         console.log("everything ready");
         //document.querySelector('#showParticipants').style.visibility = 'visible';
         document.querySelector('#fullUI').style.visibility = 'visible';
