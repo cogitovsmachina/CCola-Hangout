@@ -183,9 +183,9 @@ function createOverlays() {
       {'trackingFeature':
         gapi.hangout.av.effects.FaceTrackingFeature.MOUTH_CENTER,
         'scaleWithFace': true,
-        'scale': 1.0});
-  minScale['lengua'] = 0.5;
-  maxScale['lengua'] = 1.5;
+        'scale': 0.75});
+  minScale['lengua'] = 0.13;
+  maxScale['lengua'] = 0.13;
 
   var sonrisa = gapi.hangout.av.effects.createImageResource(
       baseURL+'/static/images/icn_expresiones_sonrisa.png');
@@ -193,29 +193,27 @@ function createOverlays() {
       {'trackingFeature': 
         gapi.hangout.av.effects.FaceTrackingFeature.MOUTH_CENTER,
       'scaleWithFace': true,
-      'scale': 1.0});
-  minScale['sonrisa'] = 0.5;
-  maxScale['sonrisa'] = 1.5;
+      'scale': 0.75});
+  minScale['sonrisa'] = 0.01;
+  maxScale['sonrisa'] = 0.01;
 
   var ave = gapi.hangout.av.effects.createImageResource(
       baseURL+'/static/images/icn_corbata.png');
   overlays['ave'] = ave.createFaceTrackingOverlay(
-      {'trackingFeature':
-       gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
-       'scaleWithFace': true,
-       'rotateWithFace': true,
-       'scale': 1.0});
+      {'trackingFeature': 
+        gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
+      'scaleWithFace':true,
+      'scale': 1.0});
   minScale['ave'] = 0.5;
   maxScale['ave'] = 1.5;
 
   var foco = gapi.hangout.av.effects.createImageResource(
     baseURL+'/static/images/icn_marco.png');
   overlays['foco'] = foco.createFaceTrackingOverlay(
-    {'trackingFeature':
-       gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
-       'scaleWithFace': true,
-       'rotateWithFace': true,
-       'scale': 1.0});
+    {'trackingFeature': 
+      gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
+      'scaleWithFace':true,
+      'scale': 1.0});
   minScale['foco'] = 0.5;
   maxScale['foco'] = 1.5;
   /////////////////////////////////
