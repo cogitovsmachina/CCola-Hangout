@@ -119,8 +119,8 @@
                 onClick="showOverlay('star')"/></dd>
             <dd>- <input class="button" type="button" value="Sol!" id="solButton"
                 onClick="showOverlay('sol')"/></dd>
-            <dd>- <input class="button" type="button" value="Pajaro!" id="pajaroButton"
-                onClick="showOverlay('pajaro')"/></dd>
+            <dd>- <input class="button" type="button" value="Hola!" id="pajaroButton"
+                onClick="showOverlay('hola')"/></dd>
             <dd>- <input class="button" type="button" value="Foco!" id="focoButton"
                 onClick="showOverlay('heart')"/></dd>
           <dt>Limpiar</dt>
