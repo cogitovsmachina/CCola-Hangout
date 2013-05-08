@@ -215,7 +215,7 @@ function createOverlays() {
     {'trackingFeature': 
       gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
       'scaleWithFace':true,
-      'scale': 3.0});
+      'scale': 0.5});
   minScale['foco'] = 3.0;
   maxScale['foco'] = 3.0;
 
