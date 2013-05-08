@@ -61,7 +61,7 @@ function onSetOffset(value) {
 
 function setControlVisibility(val) {
   if (val) {
-    overlayControls.style.visibility = 'hidden';
+    overlayControls.style.visibility = 'visible';
   } else {
     overlayControls.style.visibility = 'hidden';
   }
