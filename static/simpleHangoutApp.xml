@@ -69,8 +69,10 @@
 
 <hr>
 <br/>
+<!-- 
 <input class="button" type="button" value="Good day!" id="topHatButton"
     onClick="sayGoodDay()"/>
+-->
 </p>
 
 <p>
@@ -124,6 +126,7 @@
         <span id="offsetTxt">0</span>
 </div>
 <br/>
+<!-- 
 <div id='arbitraryURILoader'>
   You can also load any arbitrary PNG.  Enter an URL below.<br/>
         <input id="loadableURI" type="text" 
@@ -145,7 +148,7 @@
          onClick="updateMirroring()">
     Mirror me
   </input>
-         
+ -->        
 </div>
 
 </div>
