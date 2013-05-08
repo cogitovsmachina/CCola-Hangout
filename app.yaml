@@ -4,12 +4,18 @@ runtime: python27
 api_version: 1
 threadsafe: no
 
+default_expiration: "30s"
+
 handlers:
 - url: /static
   static_dir: static
 
 - url: /.*
   script: helloworld.app
+
+-url: /static
+	static_dir: static/images
+	expiration: "30s"
 
 libraries:
 - name: webapp2
