@@ -99,20 +99,22 @@
 -->
 <!-- nuevos botones -->  
 
-<dl>
-  <dt>Efectos</dt>
-    <dd>- <input class="button" type="button" value="Lengua!" id="lenguaButton"
-        onClick="showOverlay('lengua')"/></dd>
-    <dd>- <input class="button" type="button" value="Sonrisa!" id="sonrisaButton"
-        onClick="showOverlay('sonrisa')"/></dd>
-    <dd>- <input class="button" type="button" value="Corbata!" id="aveButton"
-        onClick="showOverlay('ave')"/></dd>
-    <dd>- <input class="button" type="button" value="Marco!" id="focoButton"
-        onClick="showOverlay('foco')"/></dd>
-  <dt>Limpiar</dt>
-    <dd>- <input class="button" type="button" value="Nothing." id="nothingButton"
-                            onClick="showNothing()"/></dd>
-</dl>
+  <div id="theB">
+        <dl>
+          <dt>Efectos</dt>
+            <dd>- <input class="button" type="button" value="Lengua!" id="lenguaButton"
+                onClick="showOverlay('lengua')"/></dd>
+            <dd>- <input class="button" type="button" value="Sonrisa!" id="sonrisaButton"
+                onClick="showOverlay('sonrisa')"/></dd>
+            <dd>- <input class="button" type="button" value="Corbata!" id="aveButton"
+                onClick="showOverlay('ave')"/></dd>
+            <dd>- <input class="button" type="button" value="Marco!" id="focoButton"
+                onClick="showOverlay('foco')"/></dd>
+          <dt>Limpiar</dt>
+            <dd>- <input class="button" type="button" value="Nothing." id="nothingButton"
+                                    onClick="showNothing()"/></dd>
+        </dl>
+  </div>
 
 
 </p>
