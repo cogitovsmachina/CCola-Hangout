@@ -200,20 +200,22 @@ function createOverlays() {
   var ave = gapi.hangout.av.effects.createImageResource(
       baseURL+'/static/images/icn_ave.png');
   overlays['ave'] = ave.createFaceTrackingOverlay(
-      {'trackingFeature': 
-        gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
-      'scaleWithFace':true,
-      'scale': 1.0});
+      {'trackingFeature':
+       gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
+       'scaleWithFace': true,
+       'rotateWithFace': true,
+       'scale': 1.0});
   minScale['ave'] = 0.5;
   maxScale['ave'] = 1.5;
 
   var foco = gapi.hangout.av.effects.createImageResource(
     baseURL+'/static/images/icn_corazon_foco.png');
   overlays['foco'] = foco.createFaceTrackingOverlay(
-    {'trackingFeature': 
-      gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
-      'scaleWithFace':true,
-      'scale': 1.0});
+    {'trackingFeature':
+       gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
+       'scaleWithFace': true,
+       'rotateWithFace': true,
+       'scale': 1.0});
   minScale['foco'] = 0.5;
   maxScale['foco'] = 1.5;
   /////////////////////////////////
