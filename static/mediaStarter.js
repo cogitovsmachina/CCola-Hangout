@@ -224,10 +224,8 @@ function createOverlays() {
     var star = gapi.hangout.av.effects.createImageResource(
       baseURL+'/static/images/icn_estrella.png');
       overlays['star'] = star.createOverlay(
-        {'scale':
-        {'magnitude': 0.5,
-        'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
-      overlays['star'].setPosition(0, 0.45);
+        {'position': {0, 0}, 'rotation': 0, 'scale': {'magnitude': 0, 'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
+      
       minScale['star'] = 1.5;
       maxScale['star'] = 2.5;
   /////////////////////////////////
