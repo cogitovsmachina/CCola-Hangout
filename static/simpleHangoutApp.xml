@@ -101,7 +101,7 @@
 
   <div id="theB">
         <dl>
-          <dt>Efectos</dt>
+          <dt>Efectos de cara</dt>
             <dd>- <input class="button" type="button" value="Lengua!" id="lenguaButton"
                 onClick="showOverlay('lengua')"/></dd>
             <dd>- <input class="button" type="button" value="Sonrisa!" id="sonrisaButton"
@@ -110,6 +110,8 @@
                 onClick="showOverlay('ave')"/></dd>
             <dd>- <input class="button" type="button" value="Marco!" id="marcoButton"
                 onClick="showOverlay('foco')"/></dd>
+            <dd>- <input class="button" type="button" value="Foco!" id="focoButton"
+                onClick="showOverlay('heart')"/></dd>
         </dl>
   </div>
   <div id="theB2">
@@ -121,8 +123,7 @@
                 onClick="showOverlay('sol')"/></dd>
             <dd>- <input class="button" type="button" value="Ave!" id="pajaroButton"
                 onClick="showOverlay('pajaro')"/></dd>
-            <dd>- <input class="button" type="button" value="Foco!" id="focoButton"
-                onClick="showOverlay('heart')"/></dd>
+
           <dt>Limpiar</dt>
             <dd>- <input class="button" type="button" value="Limpiar." id="nothingButton"
                                     onClick="showNothing()"/></dd>

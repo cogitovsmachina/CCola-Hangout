@@ -215,9 +215,20 @@ function createOverlays() {
     {'trackingFeature': 
       gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
       'scaleWithFace':true,
-      'scale': 0.5});
+      'scale': 3.0});
   minScale['foco'] = 3.0;
   maxScale['foco'] = 3.0;
+
+  var heart = gapi.hangout.av.effects.createImageResource(
+      baseURL+'/static/images/icn_corazon_foco.png');
+      overlays['heart'] = heart.createFaceTrackingOverlay(
+        {'trackingFeature':
+        gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
+        'scaleWithFace':true,
+        'offset': {x:0, y:-1.2},
+        'scale': 0.7});
+  minScale['heart'] = 3.0;
+  maxScale['heart'] = 3.0;
 
     // Imagenes para StatickOverlay
 
@@ -251,15 +262,15 @@ function createOverlays() {
       minScale['pajaro'] = 1.5;
       maxScale['pajaro'] = 2.5;
 
-      var heart = gapi.hangout.av.effects.createImageResource(
-      baseURL+'/static/images/icn_corazon_foco.png');
-      overlays['heart'] = heart.createOverlay(
-        {'scale':
-        {'magnitude': 0.3,
-        'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
-      overlays['heart'].setPosition(-0.3, 0.2);
-      minScale['heart'] = 1.5;
-      maxScale['heart'] = 2.5;
+     // var heart = gapi.hangout.av.effects.createImageResource(
+      //baseURL+'/static/images/icn_corazon_foco.png');
+      //overlays['heart'] = heart.createOverlay(
+        //{'scale':
+        //{'magnitude': 0.3,
+        //'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
+      //overlays['heart'].setPosition(-0.3, 0.2);
+      //minScale['heart'] = 1.5;
+      //maxScale['heart'] = 2.5;
 
   /////////////////////////////////
 
