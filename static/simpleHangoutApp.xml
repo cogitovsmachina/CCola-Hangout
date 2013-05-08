@@ -69,8 +69,10 @@
 
 <hr>
 <br/>
+<!-- 
 <input class="button" type="button" value="Good day!" id="topHatButton"
     onClick="sayGoodDay()"/>
+-->
 </p>
 
 <p>

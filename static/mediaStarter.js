@@ -20,7 +20,6 @@ function showOverlay(name) {
   hideAllOverlays();
   currentItem = name;
   setControlVisibility(true);
-  alert("elemento: " + name);
   overlays[currentItem].setVisible(true);
   updateControls();
 }
@@ -62,7 +61,7 @@ function onSetOffset(value) {
 
 function setControlVisibility(val) {
   if (val) {
-    overlayControls.style.visibility = 'visible';
+    overlayControls.style.visibility = 'hidden';
   } else {
     overlayControls.style.visibility = 'hidden';
   }
