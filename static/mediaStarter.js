@@ -227,9 +227,40 @@ function createOverlays() {
         {'scale':
         {'magnitude': 0.5,
         'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
-      overlays['star'].setPosition(-0.5, 0.5);
+      overlays['star'].setPosition(0.3, 0.3);
       minScale['star'] = 1.5;
       maxScale['star'] = 2.5;
+
+    var sol = gapi.hangout.av.effects.createImageResource(
+      baseURL+'/static/images/icn_sol.png');
+      overlays['sol'] = sol.createOverlay(
+        {'scale':
+        {'magnitude': 0.5,
+        'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
+      overlays['sol'].setPosition(0.3, 0.3);
+      minScale['sol'] = 1.5;
+      maxScale['sol'] = 2.5;
+
+      var pajaro = gapi.hangout.av.effects.createImageResource(
+      baseURL+'/static/images/icn_sol.png');
+      overlays['pajaro'] = pajaro.createOverlay(
+        {'scale':
+        {'magnitude': 0.5,
+        'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
+      overlays['pajaro'].setPosition(0.3, 0.3);
+      minScale['pajaro'] = 1.5;
+      maxScale['pajaro'] = 2.5;
+
+      var heart = gapi.hangout.av.effects.createImageResource(
+      baseURL+'/static/images/icn_sol.png');
+      overlays['heart'] = heart.createOverlay(
+        {'scale':
+        {'magnitude': 0.5,
+        'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
+      overlays['heart'].setPosition(0.3, 0.3);
+      minScale['heart'] = 1.5;
+      maxScale['heart'] = 2.5;
+
   /////////////////////////////////
 
   var stache = gapi.hangout.av.effects.createImageResource(
