@@ -61,7 +61,7 @@ function onSetOffset(value) {
 
 function setControlVisibility(val) {
   if (val) {
-    overlayControls.style.visibility = 'visible';
+    overlayControls.style.visibility = 'hidden';
   } else {
     overlayControls.style.visibility = 'hidden';
   }
@@ -227,8 +227,8 @@ function createOverlays() {
         {'scale':
         {'magnitude': 0.5,
         'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
-      overlays['star'].setPosition(0, 0.45);
-      minScale['star'] = 0.65;
+      overlays['star'].setPosition(1, 0.45);
+      minScale['star'] = 1.5;
       maxScale['star'] = 2.5;
   /////////////////////////////////
 
