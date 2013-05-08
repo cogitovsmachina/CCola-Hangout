@@ -60,13 +60,14 @@
 <center>
 
 <div id='fullUI' style='visibility:hidden;'>
+<!-- 
 <p>
 <input class="button" type="button" value="Show participants!" id="showParticipants"
     onClick="showParticipants()"/>
 </p>
 
 <div id="participantsDiv"></div>
-
+-->
 <hr>
 <br/>
 <!-- 
@@ -103,10 +104,10 @@
 <input class="button" type="button" value="Sonrisa!" id="sonrisaButton"
         onClick="showOverlay('sonrisa')"/>
 
-<input class="button" type="button" value="Ave!" id="aveButton"
+<input class="button" type="button" value="Corbata!" id="aveButton"
         onClick="showOverlay('ave')"/>
 
-<input class="button" type="button" value="Foco!" id="focoButton"
+<input class="button" type="button" value="Marco!" id="focoButton"
         onClick="showOverlay('foco')"/>
 
    
@@ -155,9 +156,9 @@
 
 </center>
 
-<p><a href="http://developers.google.com/+/hangouts/getting-started">Read the docs</a> to learn more about developing hangouts!</a></p>
 
 <script>
+/*
 function showParticipants() {
   var participants = gapi.hangout.getParticipants();
 
@@ -178,7 +179,7 @@ function showParticipants() {
 
   div.innerHTML = retVal;
 }
-
+*/
 
 </body>
 ]]>

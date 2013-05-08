@@ -198,7 +198,7 @@ function createOverlays() {
   maxScale['sonrisa'] = 1.5;
 
   var ave = gapi.hangout.av.effects.createImageResource(
-      baseURL+'/static/images/icn_ave.png');
+      baseURL+'/static/images/icn_corbata.png');
   overlays['ave'] = ave.createFaceTrackingOverlay(
       {'trackingFeature':
        gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
@@ -209,7 +209,7 @@ function createOverlays() {
   maxScale['ave'] = 1.5;
 
   var foco = gapi.hangout.av.effects.createImageResource(
-    baseURL+'/static/images/icn_corazon_foco.png');
+    baseURL+'/static/images/icn_marco.png');
   overlays['foco'] = foco.createFaceTrackingOverlay(
     {'trackingFeature':
        gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
