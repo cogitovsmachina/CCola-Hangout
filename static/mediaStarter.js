@@ -68,6 +68,7 @@ function setControlVisibility(val) {
   }
 }
 
+
 function updateOverlayControls() {
   var overlay = overlays[currentItem];
   var min = minScale[currentItem];
@@ -178,8 +179,8 @@ function createOverlays() {
 
   // Cargando nuevas imagenes /////
   var lengua = gapi.hangout.av.effects.createImageResource(
-      '/static/images/icn_expresiones_lengua.png');
-  overlays['lengua'] = heart.createFaceTrackingOverlay(
+      baseURL+'/static/images/icn_expresiones_lengua.png');
+  overlays['lengua'] = lengua.createFaceTrackingOverlay(
       {'trackingFeature':
         gapi.hangout.av.effects.FaceTrackingFeature.MOUTH_CENTER,
         'scaleWithFace': true,
@@ -264,6 +265,9 @@ function disposeArbitraryOverlay() {
 }
 
 function loadOverlay(uri) {
+    overlayControls = document.getElementById('overlayControls');
+    scaleTxt = document.getElementById('scaleTxt');
+    offsetTxt = document.getElementById('offsetTxt');
     showNothing();
     
     arbitraryResource = gapi.hangout.av.effects.createImageResource(
@@ -361,11 +365,16 @@ function init() {
   gapi.hangout.onApiReady.add(
     function(eventObj) {
       if (eventObj.isApiReady) {
+        overlayControls = document.getElementById('overlayControls');
+        scaleTxt = document.getElementById('scaleTxt');
+        offsetTxt = document.getElementById('offsetTxt');
         console.log("everything ready");
         //document.querySelector('#showParticipants').style.visibility = 'visible';
         document.querySelector('#fullUI').style.visibility = 'visible';
       }
     });
 }
+
+
 
 gadgets.util.registerOnLoadHandler(init);
