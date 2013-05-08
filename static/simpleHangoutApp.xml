@@ -43,22 +43,12 @@
 <body>
 
 <script src="https://hangoutsapi.talkgadget.google.com/hangouts/api/hangout.js?v=1.4" ></script>
-<<<<<<< HEAD
 <script src="https://cocacolahangout.appspot.com/static/html5slider.js"></script>
 <script src="https://cocacolahangout.appspot.com/static/mediaStarter.js"></script>
-=======
-<<<<<<< HEAD
-<script src="http://cocacolahangout.appspot.com/static/html5slider.js"></script>
-<<<<<<< HEAD
-=======
-<script src="http://cocacolahangout.appspot.com/static/mediaStarter.js"></script>
-=======
-<script src="/static/html5slider.js"></script>
-<script src="/static/mediaStarter.js"></script>
->>>>>>> 22d91a482dbead6c1b7c67d58342c737d5873827
->>>>>>> 6a4343baae8b9808ac8bec8960bd7f231c5c226b
 
->>>>>>> d1ec75df588ba27bc78acf0616a75ee0d0e6f33a
+
+
+
 
 
 <h3>Simple Hangout App</h3>
