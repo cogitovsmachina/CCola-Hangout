@@ -3,7 +3,7 @@ var overlayControls = document.getElementById('overlayControls');
 var scaleTxt = document.getElementById('scaleTxt');
 var offsetTxt = document.getElementById('offsetTxt');
 
-// Track our overlays for re-use later
+// Track our overlays for re-use laterç
 var overlays = [];
 
 // Scale limits---tiny hats look silly, but tiny monocles are fun.
