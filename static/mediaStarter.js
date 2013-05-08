@@ -203,9 +203,9 @@ function createOverlays() {
       {'trackingFeature': 
         gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
       'scaleWithFace':true,
-      'scale': 1.0});
+      'scale': 0.90});
   minScale['ave'] = 0.5;
-  maxScale['ave'] = 1.5;
+  maxScale['ave'] = 1.0;
 
   var foco = gapi.hangout.av.effects.createImageResource(
     baseURL+'/static/images/icn_marco.png');
@@ -213,9 +213,9 @@ function createOverlays() {
     {'trackingFeature': 
       gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
       'scaleWithFace':true,
-      'scale': 1.0});
-  minScale['foco'] = 0.5;
-  maxScale['foco'] = 1.5;
+      'scale': 0.0});
+  minScale['foco'] = 3.0;
+  maxScale['foco'] = 3.0;
   /////////////////////////////////
 
   var stache = gapi.hangout.av.effects.createImageResource(
