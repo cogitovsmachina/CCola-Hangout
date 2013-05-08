@@ -108,8 +108,24 @@
                 onClick="showOverlay('sonrisa')"/></dd>
             <dd>- <input class="button" type="button" value="Corbata!" id="aveButton"
                 onClick="showOverlay('ave')"/></dd>
-            <dd>- <input class="button" type="button" value="Marco!" id="focoButton"
+            <dd>- <input class="button" type="button" value="Marco!" id="marcoButton"
                 onClick="showOverlay('foco')"/></dd>
+          <dt>Limpiar</dt>
+            <dd>- <input class="button" type="button" value="Nothing." id="nothingButton"
+                                    onClick="showNothing()"/></dd>
+        </dl>
+  </div>
+  <div id="theB">
+        <dl>
+          <dt>Efectos Estaticos</dt>
+            <dd>- <input class="button" type="button" value="Estrella!" id="estrellaButton"
+                onClick="showOverlay('star')"/></dd>
+            <dd>- <input class="button" type="button" value="Sol!" id="solButton"
+                onClick="showOverlay('sol')"/></dd>
+            <dd>- <input class="button" type="button" value="Pajaro!" id="pajaroButton"
+                onClick="showOverlay('pajaro')"/></dd>
+            <dd>- <input class="button" type="button" value="Foco!" id="focoButton"
+                onClick="showOverlay('heart')"/></dd>
           <dt>Limpiar</dt>
             <dd>- <input class="button" type="button" value="Nothing." id="nothingButton"
                                     onClick="showNothing()"/></dd>

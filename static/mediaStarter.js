@@ -177,6 +177,7 @@ function createOverlays() {
   maxScale['mono'] = 1.5;
 
   // Cargando nuevas imagenes /////
+    // Imagenes para TrackingOverlay
   var lengua = gapi.hangout.av.effects.createImageResource(
       baseURL+'/static/images/icn_expresiones_lengua.png');
   overlays['lengua'] = lengua.createFaceTrackingOverlay(
@@ -217,6 +218,18 @@ function createOverlays() {
       'scale': 3.0});
   minScale['foco'] = 3.0;
   maxScale['foco'] = 3.0;
+
+    // Imagenes para StatickOverlay
+
+    var star = gapi.hangout.av.effects.createImageResource(
+      baseURL+'/static/images/icn_estrella.png');
+      overlays['star'] = star.createOverlay(
+        {'scale':
+        {'magnitude': 0.5,
+        'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
+      overlays['star'].setPosition(0, 0.45);
+      minScale['star'] = 0.65;
+      maxScale['star'] = 2.5;
   /////////////////////////////////
 
   var stache = gapi.hangout.av.effects.createImageResource(
