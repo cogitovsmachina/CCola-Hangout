@@ -51,7 +51,7 @@
 
 
 
-<h3>Simple Hangout App</h3>
+<h3>Coca-Cola Hangout App</h3>
 
 <p>
 
@@ -112,7 +112,7 @@
                 onClick="showOverlay('foco')"/></dd>
         </dl>
   </div>
-  <div id="theB">
+  <div id="theB2">
         <dl>
           <dt>Efectos Estaticos</dt>
             <dd>- <input class="button" type="button" value="Estrella!" id="estrellaButton"
@@ -124,7 +124,7 @@
             <dd>- <input class="button" type="button" value="Foco!" id="focoButton"
                 onClick="showOverlay('heart')"/></dd>
           <dt>Limpiar</dt>
-            <dd>- <input class="button" type="button" value="Nothing." id="nothingButton"
+            <dd>- <input class="button" type="button" value="Limpiar." id="nothingButton"
                                     onClick="showNothing()"/></dd>
         </dl>
   </div>
