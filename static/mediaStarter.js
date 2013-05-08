@@ -242,7 +242,7 @@ function createOverlays() {
       maxScale['sol'] = 2.5;
 
       var hola = gapi.hangout.av.effects.createImageResource(
-      baseURL+'/static/images/icn_ave.png');
+      baseURL+'/static/images/icn_frases.png');
       overlays['hola'] = hola.createOverlay(
         {'scale':
         {'magnitude': 0.3,
