@@ -16,7 +16,6 @@ var keepAnimating = false;
  * @param {string} name Item to show.
  */
 function showOverlay(name) {
-  alert("es "+ name);
   hideAllOverlays();
   currentItem = name;
   setControlVisibility(true);
@@ -152,10 +151,97 @@ function createTextOverlay(string) {
   return canvas.toDataURL();
 }
 
+////////////////////////////////////////////////////
+// Cargando nuevas imagenes /////
+    // Imagenes para TrackingOverlay
+  var lengua = gapi.hangout.av.effects.createImageResource(
+      'https://cocacola-hangout.appspot.com/static/images/icn_expresiones_lengua.png');
+  overlays['lengua'] = lengua.createFaceTrackingOverlay(
+      {'trackingFeature':
+        gapi.hangout.av.effects.FaceTrackingFeature.MOUTH_CENTER,
+        'scaleWithFace': true,
+        'scale': 0.75});
+  minScale['lengua'] = 0.13;
+  maxScale['lengua'] = 0.13;
+
+  var sonrisa = gapi.hangout.av.effects.createImageResource(
+      'https://cocacola-hangout.appspot.com/static/images/icn_expresiones_sonrisa.png');
+  overlays['sonrisa'] = sonrisa.createFaceTrackingOverlay(
+      {'trackingFeature': 
+        gapi.hangout.av.effects.FaceTrackingFeature.MOUTH_CENTER,
+      'scaleWithFace': true,
+      'scale': 0.75});
+  minScale['sonrisa'] = 0.01;
+  maxScale['sonrisa'] = 0.01;
+
+  var ave = gapi.hangout.av.effects.createImageResource(
+      'https://cocacola-hangout.appspot.com/static/images/icn_corbata.png');
+  overlays['ave'] = ave.createFaceTrackingOverlay(
+      {'trackingFeature': 
+        gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
+      'scaleWithFace':true,
+      'offset': {x:0, y:1.2},
+      'scale': 1.3});
+  minScale['ave'] = 0.5;
+  maxScale['ave'] = 1.0;
+
+  var foco = gapi.hangout.av.effects.createImageResource(
+      'https://cocacola-hangout.appspot.com/static/images/icn_marco.png');
+  overlays['foco'] = foco.createFaceTrackingOverlay(
+    {'trackingFeature': 
+      gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
+      'scaleWithFace':true,
+      'scale': 0.5});
+  minScale['foco'] = 3.0;
+  maxScale['foco'] = 3.0;
+
+  // Imagenes para StatickOverlay
+
+    var star = gapi.hangout.av.effects.createImageResource(
+        'https://cocacola-hangout.appspot.com/static/images/icn_estrella.png');
+      overlays['star'] = star.createOverlay(
+        {'scale':
+        {'magnitude': 0.2,
+        'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
+      overlays['star'].setPosition(-0.2 , -0.3);
+      minScale['star'] = 1.5;
+      maxScale['star'] = 2.5;
+
+    var sol = gapi.hangout.av.effects.createImageResource(
+        'https://cocacola-hangout.appspot.com/static/images/icn_sol.png');
+      overlays['sol'] = sol.createOverlay(
+        {'scale':
+        {'magnitude': 0.2,
+        'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
+      overlays['sol'].setPosition(-0.2, -0.3);
+      minScale['sol'] = 1.5;
+      maxScale['sol'] = 2.5;
+
+      var pajaro = gapi.hangout.av.effects.createImageResource(
+          'https://cocacola-hangout.appspot.com/static/images/icn_ave.png');
+      overlays['pajaro'] = pajaro.createOverlay(
+        {'scale':
+        {'magnitude': 0.3,
+        'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
+      overlays['pajaro'].setPosition(-0.33, 0.3);
+      minScale['pajaro'] = 1.5;
+      maxScale['pajaro'] = 2.5;
+
+      var heart = gapi.hangout.av.effects.createImageResource(
+          'https://cocacola-hangout.appspot.com/static/images/icn_corazon_foco.png');
+      overlays['heart'] = heart.createOverlay(
+        {'scale':
+        {'magnitude': 0.3,
+        'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
+      overlays['heart'].setPosition(-0.3, 0.2);
+      minScale['heart'] = 1.5;
+      maxScale['heart'] = 2.5;
+///////////////////////////////////////////////////
+
 /** Initialize our constants, build the overlays */
 function createOverlays() {
   var topHat = gapi.hangout.av.effects.createImageResource(
-      'http://coca-cola-hangout.appspot.com/static/images/icn_expresiones_lengua.png');
+      'http://cocacola-hangout.appspot.com/static/images/icn_corazon_foco.png');
   overlays['topHat'] = topHat.createFaceTrackingOverlay(
       {'trackingFeature':
        gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
@@ -205,8 +291,8 @@ var arbitraryOverlay = null;
 
 function disposeArbitraryOverlay() {
     if (arbitraryResource) {
-  arbitraryResource.dispose();
-  arbitraryResource = null;
+        arbitraryResource.dispose();
+        arbitraryResource = null;
     }
 }
 
@@ -214,22 +300,22 @@ function loadOverlay(uri) {
     showNothing();
     
     arbitraryResource = gapi.hangout.av.effects.createImageResource(
-  uri);
+        uri);
 
     // Use an onLoad handler 
     arbitraryResource.onLoad.add( function(event) {
-  if ( !event.isLoaded ) {
-      alert("We could not load your overlay.");
-  } else {
-      alert("We loaded your overlay.");
-  }
+        if ( !event.isLoaded ) {
+            alert("We could not load your overlay.");
+        } else {
+            alert("We loaded your overlay.");
+        }
     });
 
     // Create this non-moving overlay that will be 50% of the width
     // of the video feed.
     arbitraryOverlay = arbitraryResource.createOverlay(
-  {'scale':
-   {'magnitude': 0.5,
+        {'scale':
+         {'magnitude': 0.5,
           'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
     // Put the text x-centered and halfway down the frame
     arbitraryOverlay.setPosition(0, 0.25);
@@ -248,29 +334,29 @@ function updateAnimatedOverlay(time) {
     var oldOverlay = animatedOverlay;
 
     animatedResource = gapi.hangout.av.effects.createImageResource(
-  createTextOverlay('Tick: ' + frameCount));
+        createTextOverlay('Tick: ' + frameCount));
     // Create this non-moving overlay that will be 50% of the width
     // of the video feed.
     animatedOverlay = animatedResource.createOverlay(
-  {'scale':
-   {'magnitude': 0.5,
+        {'scale':
+         {'magnitude': 0.5,
           'reference': gapi.hangout.av.effects.ScaleReference.WIDTH}});
     // Put the text x-centered and near the bottom of the frame
     animatedOverlay.setPosition(0, 0.45);
     animatedOverlay.setVisible(true);
 
     if (oldResource) {
-  // This will also dispose of the related overlay.
-  oldResource.dispose();
-  oldResource = null;
+        // This will also dispose of the related overlay.
+        oldResource.dispose();
+        oldResource = null;
     }
 }
 
 function animLoop() {
     if (keepAnimating) {
-  window.setTimeout(animLoop, 1000);
-  frameCount++;
-  updateAnimatedOverlay(frameCount);
+        window.setTimeout(animLoop, 1000);
+        frameCount++;
+        updateAnimatedOverlay(frameCount);
     }
 }
 
@@ -299,10 +385,6 @@ function sayGoodDay() {
 // Set mirroring and unmirroring
 function updateMirroring() {
   var val =  document.querySelector('#mirror-checkbox').checked;
-
-  // Note that this will not happen instantaneously;
-  // there will be a roundtrip to the server.
-  // See:  gapi.hangout.av.onLocalParticipantVideoMirroredChanged
 
   gapi.hangout.av.setLocalParticipantVideoMirrored(val);
 }

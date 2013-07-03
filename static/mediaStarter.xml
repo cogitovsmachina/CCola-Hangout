@@ -27,12 +27,83 @@
   -moz-border-radius: 3px;
   background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
   background: -moz-linear-gradient(top, #fff, #ddd);  
-  border: 1px solid #bbb;
+  border: 0px solid #bbb;
 }
 
 .button:active {
         background: -webkit-gradient(linear, left top, left bottom, from(#aaa), to(#333)); 
         background: -moz-linear-gradient(bottom, #ddd, #aaa); }
+
+.botonimagenlengua{
+  background-image:url(https://cocacola-hangout.appspot.com/static/images/btn_expresiones_lengua.png);
+  background-repeat:no-repeat;
+  height:100px;
+  width:100px;
+  border:0px
+  background-position:center;
+}
+  .botonimagensonrisa{
+  background-image:url(https://cocacola-hangout.appspot.com/static/images/btn_expresiones_sonrisa.png);
+  background-repeat:no-repeat;
+  height:100px;
+  width:100px;
+  border:0px
+  background-position:center;
+}
+
+.botonimagencorbata{
+  background-image:url(https://cocacola-hangout.appspot.com/static/images/btn_corbata.png);
+  background-repeat:no-repeat;
+  height:100px;
+  width:100px;
+  border:0px
+  background-position:center;
+}
+
+.botonimagenmarco{
+  background-image:url(https://cocacola-hangout.appspot.com/static/images/btn_marco.png);
+  background-repeat:no-repeat;
+  height:100px;
+  width:100px;
+  border:0px
+  background-position:center;
+}
+
+.botonimagenestrella{
+  background-image:url(https://cocacola-hangout.appspot.com/static/images/btn_estrella.png);
+  background-repeat:no-repeat;
+  height:100px;
+  width:100px;
+  border:0px
+  background-position:center;
+}
+
+.botonimagenesol{
+  background-image:url(https://cocacola-hangout.appspot.com/static/images/btn_sol.png);
+  background-repeat:no-repeat;
+  height:100px;
+  width:100px;
+  border:0px
+  background-position:center;
+}
+
+.botonimagenpajaro{
+  background-image:url(https://cocacola-hangout.appspot.com/static/images/btn_ave.png);
+  background-repeat:no-repeat;
+  height:100px;
+  width:100px;
+  border:0px
+  background-position:center;
+}
+
+.botonimagenfoco{
+  background-image:url(https://cocacola-hangout.appspot.com/static/images/btn_corazon_foco.png);
+  background-repeat:no-repeat;
+  height:100px;
+  width:100px;
+  border:0px
+  background-position:center;
+}
 
 -->
 </style>
@@ -45,11 +116,47 @@ charset = iso - 8859 - 1 " />
 <body>
 
 <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
-<script src="https://coca-cola-hangout.appspot.com/static/html5slider.js"></script>
+<script src="https://cocacola-hangout.appspot.com/static/html5slider.js"></script>
 
-<center>
+ <center>
 
 <div id='fullUI' style='visibility:hidden;'>
+
+<!--  codigo nuevo -->
+<table border="0" bordercolor="#FFFFFF" width="70%" cellpadding="3" cellspacing="3">
+  <tr>
+    <td><div id="theB">
+        <dl>
+          
+            <dd><input class="button botonimagenlengua" type="button" id="lenguaButton"
+                onClick="showOverlay('lengua')"/></dd>
+            <dd><input class="button botonimagensonrisa" type="button" id="sonrisaButton"
+                onClick="showOverlay('sonrisa')"/></dd>
+            <dd><input class="button botonimagencorbata" type="button" id="corbataButton"
+                onClick="showOverlay('ave')"/></dd>
+            <dd><input class="button botonimagenmarco" type="button" id="marcoButton"
+                onClick="showOverlay('foco')"/></dd>
+        </dl>
+  </div></td>
+    <td><div id="theB2">
+        <dl>
+          
+            <dd><input class="button botonimagenestrella" type="button" id="estrellaButton"
+                onClick="showOverlay('star')"/></dd>
+            <dd><input class="button botonimagenesol" type="button" id="solButton"
+                onClick="showOverlay('sol')"/></dd>
+            <dd><input class="button botonimagenpajaro" type="button" id="pajaroButton"
+                onClick="showOverlay('pajaro')"/></dd>
+            <dd><input class="button botonimagenfoco" type="button" id="focoButton"
+                onClick="showOverlay('heart')"/></dd>
+        </dl>
+  </div></td>
+  </tr>
+</table>
+
+
+
+<!--
 <p>
 <br/>
 <input class="button" type="button" value="Good day!" id="topHatButton"
@@ -58,7 +165,6 @@ charset = iso - 8859 - 1 " />
 
 <p>
 <br/>
-
 <input class="button" type="button" value="Top hat!" id="topHatButton"
     onClick="showOverlay('topHat')"/>
 
@@ -78,7 +184,7 @@ charset = iso - 8859 - 1 " />
 <input class="button" type="button" value="Nothing." id="nothingButton"
                             onClick="showNothing()"/>
 </p>
-        
+-->        
 <div id="overlayControls" style="visibility: hidden">
 
         SCALE:
@@ -90,19 +196,19 @@ charset = iso - 8859 - 1 " />
         <span id="offsetTxt">0</span>
 </div>
 <br/>
+<!--
 <div id='arbitraryURILoader'>
   You can also load any arbitrary PNG.  Enter an URL below.<br/>
         <input id="loadableURI" type="text" 
                placeholder="Enter an image URL that ends in .png"
-               style="width:300px;"
-               />
+               style="width:300px;"/>
         <input class="button"
                type="button" 
                value="Load an overlay" id="animatedButton"
                onClick="loadOverlay(document.querySelector('#loadableURI').value)"/>
 
 </div>
-
+<!--
 <div>
   <input class="button"
          type="checkbox"
@@ -113,12 +219,12 @@ charset = iso - 8859 - 1 " />
   </input>
          
 </div>
-
+-->
 </div>
 
-</center>
+ </center>
 
-<script src="https://coca-cola-hangout.appspot.com/static/mediaStarter.js"></script>
+<script src="https://cocacola-hangout.appspot.com/static/mediaStarter.js"></script>
 
 ]]>
 </Content>
